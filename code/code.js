@@ -493,7 +493,7 @@ function porkChopGetUserInfo () {
 			appPrefs.rssLink = "https://twitter.com/" + localStorage.twScreenName;
 			prefsToStorage ();
 			}
-		console.log ("porkChopStartup: twitterUserInfo == " + jsonStringify (twitterUserInfo));
+		console.log ("porkChopGetUserInfo: twitterUserInfo == " + jsonStringify (twitterUserInfo));
 		});
 	}
 function porkChopStartup (options) {
@@ -510,6 +510,7 @@ function porkChopStartup (options) {
 	for (var x in options) {
 		appConsts [x] = options [x];
 		}
+	console.log ("porkChopStartup: appConsts == " + jsonStringify (appConsts));
 	twStorageData.urlTwitterServer = appConsts.urlTwitterServer; //1/16/16 by DW
 	urlDefaultServer = appConsts.urlTwitterServer; //"http://twitter.porkchop.io/";
 	//check if we're starting up on a phone
