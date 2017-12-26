@@ -10,7 +10,11 @@ There are links on that page to user-level docs and a place to ask questions abo
 
 ### How to build
 
-This is the script I use to build Electric Pork on the Mac. 
+1. cd <the directory with the electricPork code>
 
-<code>sudo electron-packager . Electric-Pork --platform=darwin --arch=all --electron-version=0.37.5 --overwrite --icon=pork.icns</code>
+2. npm install
+
+3. sudo electron-packager . "Electric Pork" --platform=darwin --arch=all --electron-version=0.37.5 --overwrite --icon=pork.icns
+
+There should be an Electric Pork sub-directory, with an app inside. You can copy that anywhere, or run it from that location.
 
