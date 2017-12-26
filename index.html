@@ -1,0 +1,148 @@
+<html>
+	<head>
+		<title>Little Pork Chop</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="http://fargo.io/code/jquery-1.9.1.min.js"></script><link href="http://fargo.io/code/bootstrap.css" rel="stylesheet"><script src="http://fargo.io/code/bootstrap.min.js"></script><link rel="stylesheet" href="http://fargo.io/code/fontAwesome/css/font-awesome.min.css"/><link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Rancho" rel="stylesheet"><script src="http://fargo.io/code/node/shared/utils.js"></script><script src="http://fargo.io/code/node/shared/alertdialog.js"></script><script src="http://fargo.io/code/node/shared/confirmdialog.js"></script><script src="http://fargo.io/code/node/shared/askdialog.js"></script><script src="http://fargo.io/code/strftime.js"></script><script src="http://fargo.io/code/shared/ga.js"></script><script src="http://fargo.io/code/shared/app.js"></script><script src="http://fargo.io/code/shared/menus.js"></script><link href="http://fargo.io/code/shared/menus.css" rel="stylesheet" type="text/css"><link href="http://fargo.io/code/shared/app.css" rel="stylesheet" type="text/css"><script src="http://fargo.io/code/shared/appprefs.js?x=2"></script><script src="http://fargo.io/code/shared/jBeep.min.js"></script><script src="http://fargo.io/code/shared/beep.js"></script>
+		<script src="http://fargo.io/code/storage/api.js"></script>
+		<script src="http://fargo.io/code/shared/buildrss.js?x=0"></script> 
+		<script src="http://fargo.io/code/autogrow/jquery.autogrowtextarea.js"></script> 
+		<script src="http://pork.io/code/new/code.js?x=1"></script> 
+		<link href="http://pork.io/code/new/styles.css?x=1" rel="stylesheet">
+		</head>
+	<body>
+		<div class="divTelltalePart" id="idTellTalePart"> 
+			</div>
+		<div class="divInfoDialog">
+			<div id="idInfoDialog" class="modal hide fade">
+				<div class="modal-body">
+					<div class="divInfoBodyText">
+						<h4>The easiest way to tweet a storm! :-)</h4>
+						<p>Type a couple of paragraphs in the text area. We'll automatically chop them into 280-character chunks. When you're ready to tweet, click the button at the bottom, and off they go!</p>
+						<p>Important: We don't retain any information about you, nor do we retain any ability to post to Twitter, or read anything from your Twitter account. That information is stored <i>locally</i> only on your own computer. You can erase it simply by signing off. </p>
+						<p>If you have any questions or comments, please use the comments section of <a onclick="openUrl ('http://scripting.com/2014/06/06/theEasiestWayToTweetAStorm.html')">this blog post</a>.</p>
+						<p>Written by <a onclick="openUrl ('http://scripting.com/')">Dave Winer</a>, with xoxo.</p>
+						</div>
+					</div>
+				<div class="modal-footer">
+					<a href="#" class="btn btn-primary" onclick="$('#idInfoDialog').modal ('hide');">OK</a>
+					</div>
+				</div>
+			</div>
+		<div class="divPrefsDialog" comment="This is the Settings dialog.">
+			<div id="idPrefsDialog" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="windowTitleLabel" aria-hidden="true">
+				<div class="modal-body">
+					<div class="divDialogElements">
+						<form method="POST">
+	<div class="divTabsFromOutline">
+	<div class="tabbable">
+		<ul class="nav nav-tabs" data-tabs="tabs">
+			<li class="active" ><a href="#idPrefix454"  data-toggle="tab">Prefix</a></li>
+			<li><a href="#idTiming454"  data-toggle="tab">Timing</a></li>
+			<li><a href="#idFeed454"  data-toggle="tab">Feed</a></li>
+			<li><a href="#idTag454"  data-toggle="tab">Tag</a></li>
+			</ul>
+		<div id="my-tab-content" class="tab-content">
+			<div class="active tab-pane" id="idPrefix454">
+				<fieldset>
+					<div class="divPrefs">	<p>You can change the text we add after the number at the beginning of each tweet.</p><div class="clearfix">	<label for="stringAfterNumber">Text:</label>	<div class="input">		<input class="xlarge prefsInput" id="stringAfterNumber" name="stringAfterNumber" size="50" type="text" value="" placeholder="The text we add after the number on each tweet." />		</div>	</div><div class="clearfix">	<label for="flIncludeTotalTweets"></label>	<div class="input">		<input type="checkbox" name="flIncludeTotalTweets" value=xxx>&nbsp;Include total number of tweets in prefix.		</div>	</div>	</div>
+					</fieldset>
+						</div>
+					<div class="tab-pane" id="idTiming454">
+						<fieldset>
+							<div class="divPrefs">	<p>How much time between each tweet in a sequence?</p><div class="clearfix">	<label for="ctSecsBetwTweets">Time:</label>	<div class="input">		<input class="xlarge numberPrefsInput" id="ctSecsBetwTweets" name="ctSecsBetwTweets" size="7" type="text" value="" /><span class="textToRight">&nbsp;(seconds)</span>		</div>	</div>	</div>
+							</fieldset>
+								</div>
+							<div class="tab-pane" id="idFeed454">
+								<fieldset>
+									<div class="divPrefs">	<div class="clearfix">	<label for="flPublishRss"></label>	<div class="input">		<input type="checkbox" name="flPublishRss" value=xxx>&nbsp;Include your posts in a public feed.		</div>	</div><div class="clearfix">	<label for="rssTitle">Title:</label>	<div class="input">		<input class="xlarge prefsInput" id="rssTitle" name="rssTitle" size="50" type="text" value="" placeholder="The &lt;title> element for the feed." />		</div>	</div><div class="clearfix">	<label for="rssLink">Link:</label>	<div class="input">		<input class="xlarge prefsInput" id="rssLink" name="rssLink" size="50" type="text" value="" placeholder="The &lt;link> element for the feed." />		</div>	</div><div class="clearfix">	<label for="rssDescription">Description:</label>	<div class="input">		<textarea class="xxlarge" id="rssDescription" name="rssDescription" cols="70" rows="3"placeholder="The &lt;description> element for the feed." ></textarea>		</div>	</div><div class="clearfix">	<label for="rssFeedUrl">Feed URL:</label>	<div class="input">		<input class="xlarge prefsInput" id="rssFeedUrl" name="rssFeedUrl" size="50" type="text" value="" placeholder="After your next post, this will contain the URL of your feed." />		</div>	</div>	</div>
+									</fieldset>
+										</div>
+									<div class="tab-pane" id="idTag454">
+										<fieldset>
+											<div class="divPrefs">	<p>You can automatically add a hash tag at the end of every tweet.</p><div class="clearfix">	<label for="hashTag">Tag:</label>	<div class="input">		<input class="xlarge prefsInput" id="hashTag" name="hashTag" size="50" type="text" value="" placeholder="#tag to add to every tweet" />		</div>	</div>	</div>
+											</fieldset>
+												</div>
+											</div>
+										</div>
+									</div>
+
+	</form>
+
+						</div>
+					</div>
+				<div class="modal-footer">
+					<a href="#" class="btn" onclick="prefsCloseDialog ();">Cancel</a>
+					<a href="#" class="btn btn-primary" onclick="prefsOkClicked ();">OK</a>
+					</div>
+				</div>
+			</div>
+		<div class="divPorkChopPage">
+			<div class="divVersionNumber" id="idVersionNumber">
+				</div>
+			<div class="divTextAndControls" id="idTextAndControls">
+				<div class="divTextArea" id="idTextArea">
+					<textarea class="myTextArea" id="idMainTextArea" onKeyUp="recalcTweetArray ()" placeholder="Type a few ideas here. We'll chop them into a stream. Click the blue button when you're ready to tweet."></textarea>
+					<div class="divTweetArray" id="idTweetArray">
+						</div>
+					<button id="idTweetButton"  class="btn btn-primary" type="button" onclick="startTweeting ();"></button>
+					<div class="divDataFolderDisplay" id="idDataFolderDisplay">
+						</div>
+					</div>
+				<div class="divProductControls">
+					<center>
+						<div class="divProductName" id="idProductName">
+							Electric Pork
+							</div>
+						<div class="divTwitterButtonGroup">
+							<button id="idTwitterButton"  class="btn" type="button" onclick="toggleConnect ();">&nbsp;</button>
+							<div class="divScreenName" id="idScreenName"></div>
+							</div>
+						<div class="divHelpLink"><a onclick="showAboutDialog ()"><i class="fa fa-info-circle"></i></a><a onclick="showPrefsDialog ()" style="margin-left: .2em;"><i class="fa fa-gear"></i></a></div>
+						<div class="divEasiestWay"><a onclick="openUrl ('http://littlepork.smallpict.com/2014/07/08/theEasiestWayToTweetAStorm.html')">The easiest way to tweet a storm!</a></div>
+						<div class="divPorkChopSocialLinks">
+							<a class="aSocialMediaLink" id="idTwitterLink" onclick="openUrl ('http://twitter.com/davewiner')"><i class="fa fa-twitter" style="color: #4099FF; font-weight: bold;"></i></a>
+							<a class="aSocialMediaLink" id="idFacebookLink" onclick="openUrl ('http://facebook.com/dave.winer.12')"><i class="fa fa-facebook" style="color: #4C66A4; font-weight: bold;"></i></a>
+							<a class="aSocialMediaLink" id="idGithubLink" onclick="openUrl ('http://github.com/scripting')"><i class="fa fa-github" style="color: black; font-weight: bold;"></i></a>
+							<a class="aSocialMediaLink" id="idLinkedInLink" onclick="openUrl ('http://www.linkedin.com/in/scripting')"><i class="fa fa-linkedin" style="color: #069; font-weight: bold;"></i></a>
+							<a class="aSocialMediaLink" id="idRssLink" onclick="openUrl ('http://littlepork.smallpict.com/rss.xml')"><i class="fa fa-rss" style="color: orange; font-weight: bold;"></i></a>
+							</div>
+						
+						</center>
+					</div>
+				</div>
+			
+			<center id="idPhoneTextAndControls">
+				<div class="phoneProductName" id="idPhoneProductName">
+					Electric Pork
+					</div>
+				<textarea class="phoneTextArea" id="idPhoneTextArea" onKeyUp="recalcTweetArray ()" placeholder="Type a few ideas here. We'll chop them into a stream. Click the blue button when you're ready to tweet."></textarea>
+				<button class="phoneTweetButton btn btn-primary" id="idPhoneTweetButton" type="button" onclick="startTweeting ();"></button>
+				<div class="phoneTweetArray" id="idPhoneTweetArray">
+					</div>
+				<div class="phoneProductControls">
+					<button id="idPhoneTwitterButton"  class="btn" type="button" onclick="twToggleConnectCommand ();"></button>
+					<div class="phoneScreenName" id="idPhoneScreenName"></div>
+					</div>
+				</center>
+			
+			
+			<div class="divScriptInterface" id="idScriptInterface" style="display: none">
+				<div class="divEditorContainer">
+					<textarea class="quickScriptTextArea" id="idQuickScript" onKeyUp="keyupQuickScript ()" placeholder="Write a script here and run it."></textarea>
+					</div>
+				<div class="divQuickScriptValue" id="idQuickScriptValue">
+					</div>
+				<button id="idUpdateButton" class="btn btnRun" type="button" onclick="runQuickScript ();">Run</button>
+				
+				<pre class="divScriptMsg" id="idScriptMsg">
+					</pre>
+				</div>
+			</div>
+		<script>
+			$(document).ready (function () {
+				porkChopStartup ();
+				});
+			</script>
+		</body>
+	</html>

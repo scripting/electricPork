@@ -1,0 +1,8 @@
+{
+	"name": "electricPork",
+	"version": "1.5.0",
+	"main": "main.js",
+	"dependencies" : {
+		"electronland": "*"
+		}
+	}

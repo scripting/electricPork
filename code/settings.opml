@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<opml version="2.0">
+	<head>
+		<title>settings.opml</title>
+		<dateModified>&lt;%dateModified%></dateModified>
+		<expansionState></expansionState>
+		<vertScrollState>1</vertScrollState>
+		<windowTop>300</windowTop>
+		<windowLeft>700</windowLeft>
+		<windowBottom>900</windowBottom>
+		<windowRight>1500</windowRight>
+		</head>
+	<body created="Sat, 07 Jun 2014 12:47:47 GMT" pgfnum="41808" text="settings.opml">
+		<outline created="Sun, 08 Jun 2014 15:10:42 GMT" pgfnum="42033" text="Prefix">
+			<outline created="Sat, 07 Jun 2014 13:07:12 GMT" pgfnum="41826" text="&lt;p&gt;You can change the text we add after the number at the beginning of each tweet.&lt;/p&gt;"></outline>
+			<outline text="&lt;%prefs.stringPref (&quot;Text&quot;, &quot;stringAfterNumber&quot;, &quot;The text we add after the number on each tweet.&quot;)%&gt;"></outline>
+			<outline text="&lt;%prefs.checkboxPref (&quot;Include total number of tweets in prefix.&quot;, &quot;flIncludeTotalTweets&quot;)%&gt;"></outline>
+			</outline>
+		<outline created="Mon, 09 Jun 2014 19:32:14 GMT" pgfnum="14608" text="Timing">
+			<outline created="Mon, 09 Jun 2014 19:34:47 GMT" pgfnum="14609" text="&lt;p&gt;How much time between each tweet in a sequence?&lt;/p&gt;"></outline>
+			<outline text="&lt;%prefs.numberPref (&quot;Time&quot;, &quot;ctSecsBetwTweets&quot;, &quot;(seconds)&quot;, &quot;&quot;)%&gt;"></outline>
+			</outline>
+		<outline created="Sun, 08 Jun 2014 15:19:57 GMT" pgfnum="42039" text="Feed">
+			<outline text="&lt;%prefs.checkboxPref (&quot;Include your posts in a public feed.&quot;, &quot;flPublishRss&quot;)%&gt;"></outline>
+			<outline text="&lt;%prefs.stringPref (&quot;Title&quot;, &quot;rssTitle&quot;, &quot;The &amp;lt;title&gt; element for the feed.&quot;)%&gt;"></outline>
+			<outline text="&lt;%prefs.stringPref (&quot;Link&quot;, &quot;rssLink&quot;, &quot;The &amp;lt;link&gt; element for the feed.&quot;)%&gt;"></outline>
+			<outline text="&lt;%prefs.textAreaPref (&quot;Description&quot;, &quot;rssDescription&quot;, &quot;The &amp;lt;description&gt; element for the feed.&quot;, rows:3)%&gt;"></outline>
+			<outline text="&lt;%prefs.stringPref (&quot;Feed URL&quot;, &quot;rssFeedUrl&quot;, &quot;After your next post, this will contain the URL of your feed.&quot;)%&gt;"></outline>
+			</outline>
+		<outline created="Sun, 15 Jun 2014 22:37:47 GMT" pgfnum="42131" text="Tag">
+			<outline created="Mon, 09 Jun 2014 19:34:47 GMT" pgfnum="14609" text="&lt;p&gt;You can automatically add a hash tag at the end of every tweet.&lt;/p&gt;"></outline>
+			<outline text="&lt;%prefs.stringPref (&quot;Tag&quot;, &quot;hashTag&quot;, &quot;#tag to add to every tweet&quot;)%&gt;"></outline>
+			</outline>
+		</body>
+	</opml>

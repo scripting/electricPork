@@ -1,0 +1,244 @@
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+	.divTextAndControls {
+		width: 400px;
+		margin-left: 10px;
+		margin-right: 10px;
+		margin-top: 30px;
+		}
+	.divTextArea {
+		float: none;
+		margin-bottom: 20px;
+		width: 400px;
+		}
+	.myTextArea {
+		width: 400px;
+		min-height: 200px;
+		margin: 0;
+		margin-bottom: 0;
+		border: 1px solid silver;
+		}
+	.divTelltalePart { 
+		visibility: visible;
+		background-color: green;
+		}
+	.phoneTextArea {
+		width: 90%;
+		left-margin: auto;
+		right-margin: auto;
+		}
+	.phoneTweetArray {
+		text-align: left;
+		width: 90%;
+		background-color: whitesmoke;
+		padding: 5px;
+		border: 1px solid silver;
+		min-height: 50px;
+		}
+	.phoneTweetButton {
+		margin-bottom: 10px;
+		}
+	.phoneProductName {
+		font-family: Rancho;
+		font-size: 32px;
+		margin-top: 10px;
+		margin-bottom: 15px;
+		clear: both;
+		}
+	.phoneProductControls {
+		border: 1px solid silver;
+		padding: 5px;
+		background-color: white;
+		width: 170px;
+		margin-top: 10px;
+		margin-bottom: 50px;
+		}
+	.phoneScreenName {
+		margin-top: 12px;
+		}
+	}
+
+body {
+	background-color: whitesmoke;
+	}
+.divPorkChopPage {
+	font-family: Ubuntu;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin-left: 0;
+	margin-top: 0;
+	border-top: 1px solid silver;
+	z-index: 0;
+	background-image:url("http://static.scripting.com/larryKing/images/2014/06/06/keatonTrain.jpg");
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	}
+.divTextArea {
+	float: right;
+	width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0;
+	}
+.myTextArea {
+	font-family: "Ubuntu";
+	font-size: 17px;
+	line-height: 140%;
+	width: 700px;
+	min-height: 200px;
+	margin: 0;
+	margin-bottom: 0;
+	border: 1px solid silver;
+	}
+.divTweetArray {
+	font-family: "Ubuntu";
+	font-size: 17px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	background-color: whitesmoke;
+	padding: 5px;
+	border: 1px solid silver;
+	min-height: 50px;
+	}
+.divTweetArray p {
+	line-height: 140%;
+	margin: 3px;
+	}
+.divProductControls {
+	margin-right: 10px;
+	border: 1px solid silver;
+	padding: 15px;
+	background-color: whitesmoke;
+	width: 170px;
+	}
+.divTextAndControls {
+	width: 915px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 40px;
+	}
+.divProductName {
+	font-family: Rancho;
+	font-size: 32px;
+	}
+.divCharCount {
+	margin-top: 12px;
+	}
+.divTwitterButtonGroup {
+	margin-top: 12px;
+	}
+.divScreenName {
+	margin-top: 12px;
+	}
+.tablePorkChop {
+	margin-top: 100px;
+	}
+.divHelpText {
+	background-color: whitesmoke;
+	padding: 2px;
+	border: 1px solid silver;
+	margin-top: 8px;
+	text-align: left;
+	width: 700px;
+	margin-bottom: 10px;
+	}
+.divHelpLink {
+	margin-top: 12px;
+	font-size: 24px;
+	}
+.divHelpLink a {
+	color: black;
+	cursor: pointer;
+	}
+.divInfoBodyText {
+	margin-right: 10px;
+	}
+.divInfoDialog .modal {
+	width: 700px;
+	left: 45%;
+	}
+.divInfoDialog p {
+	font-size: 18px;
+	line-height: 150%;
+	padding-top: 12px;
+	}
+.divInfoDialog h4 {
+	font-family: Ubuntu;
+	}
+.divInfoDialog .btn {
+	width: 80px;
+	margin-left: 5px;
+	}
+.divVersionNumber {
+	margin: 5px;
+	float: right;
+	}
+.divEasiestWay {
+	margin-top: 10px;
+	width: 80%;
+	}
+.divPorkChopSocialLinks {
+	letter-spacing: 5px; 
+	margin-top: 13px;
+	}
+.divTelltalePart { 
+	visibility: hidden;
+	}
+
+
+.divScriptInterface {
+	float: right;
+	width: 780px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+	}
+.divScriptMsg {
+	font-family: "Ubuntu";
+	font-size: 18px;
+	line-height: 140%;
+	margin-top: 2em;
+	display: none;
+	}
+.quickScriptTextArea {
+	font-family: "Ubuntu";
+	font-size: 16px;
+	width: 600px; 
+	line-height: 130%;
+	margin: 0;
+	margin-bottom: 5px;
+	margin-right: 5px;
+	border: 1px solid silver;
+	height: 5em;
+	margin-top: 5px;
+	}
+.btnRun {
+	width: 5em;
+	}
+a {
+	cursor: pointer;
+	}
+.divQuickScriptValue {
+	background-color: whitesmoke;
+	border: 1px solid silver;
+	height: 1.4em;
+	width: 592px; 
+	margin-bottom: 5px;
+	padding: 4px;
+	font-size: 16px;
+	color: gray;
+	}
+
+.divDataFolderDisplay {
+	margin-top: 5px;
+	color: white;
+	text-shadow: 1px 1px black;
+	}
+
