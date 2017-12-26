@@ -10,7 +10,7 @@ There are links on that page to user-level docs and a place to ask questions abo
 
 ### How to build
 
-1. cd <the directory with the electricPork code>
+1. cd &lt;the directory with the electricPork code>
 
 2. npm install
 
