@@ -38,7 +38,7 @@ I am not an expert at installing electron and electron-packager, but I've manage
 
 2. npm install
 
-3. <code>sudo electron-packager . "Electric Pork" --platform=darwin --arch=all --electron-version=0.37.5 --overwrite --icon=pork.icns</code>
+3. sudo electron-packager . "Electric Pork" --platform=darwin --arch=all --electron-version=0.37.5 --overwrite --icon=pork.icns
 
 There should be an Electric Pork sub-directory, with an app inside. You can copy that anywhere, or run it from that location.
 
