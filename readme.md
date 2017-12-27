@@ -16,10 +16,6 @@ There are two reasons, the second much more important than the first.
 
 2. It's a demo app for the <a href="https://github.com/scripting/electronLand">ElectronLand</a> package, which hides most of the details of making an app run in Electron, and making it cross-platform. So far I've only mastered creating Mac apps with ElectronLand, but I want my apps to go to Linux and Windows, and perhaps other places that Electron might be going. By releasing Electric Pork as open source, and asking that people try to port it, we will get ports of the underlying framework. And that will make other projects be cross-platform as well. It's a way of getting ElectronLand thoroughly ported, if it works. 
 
-### What is ElectronLand?
-
-
-
 ### Requirements
 
 In order to build Electric Pork, you need to install three things:
