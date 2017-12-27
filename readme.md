@@ -32,6 +32,8 @@ I am not an expert at installing electron and electron-packager, but I've manage
 
 ### How to build
 
+0. Download or clone the project from GitHub. 
+
 1. cd &lt;the directory with the electricPork code>
 
 2. npm install
