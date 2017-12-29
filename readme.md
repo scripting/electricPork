@@ -26,7 +26,7 @@ In order to build Electric Pork, you need to install three things:
 
 3. electron-packager.
 
-Installing Node is easy, I've got a how-to for that on the 1999-project site.
+Installing Node is easy, I've got a <a href="https://github.com/scripting/1999-project/blob/master/docs/setup.md#install-nodejs">how-to</a> for that on the 1999-project site.
 
 I am not an expert at installing electron and electron-packager, but I've managed to do it on my systems a few times.
 
