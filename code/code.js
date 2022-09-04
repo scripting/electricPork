@@ -2,10 +2,11 @@ var appConsts = {
 	productname: "littlePorkChop",
 	productnameForDisplay: "Little Pork Chop",
 	domain: "pork.io", 
-	urlTwitterServer: "http://twitter.porkchop.io/", //5/23/15 by DW
+	urlTwitterServer: "http://twitter.pork.io/", //10/13/20 by DW
 	urlChangeNotes: "http://scripting.com/2017/03/22/whatsNewInElectricPork061.html",
 	flElectronShell: false, //2/20/17 by DW
-	version: "1.5.0"
+	flWhitelistEnabled: false, //10/13/20 by DW
+	version: "1.5.1"
 	}
 var appPrefs = {
 	flReverseChronologicOrder: false, 
@@ -414,16 +415,21 @@ function startTweeting () {
 		doStart ();
 		}
 	else {
-		if (twIsTwitterConnected ()) {
-			twUserWhitelisted (localStorage.twScreenName, function (flwhitelisted) {
-				if (flwhitelisted) {
-					doStart ();
-					return;
-					}
-				else {
-					alertDialog ("Can't post because \"" + localStorage.twScreenName + "\" is not whitelisted.");
-					}
-				});
+		if (appConsts.flWhitelistEnabled) { //10/13/20 by DW -- disable whitelisting
+			if (twIsTwitterConnected ()) {
+				twUserWhitelisted (localStorage.twScreenName, function (flwhitelisted) {
+					if (flwhitelisted) {
+						doStart ();
+						return;
+						}
+					else {
+						alertDialog ("Can't post because \"" + localStorage.twScreenName + "\" is not whitelisted.");
+						}
+					});
+				}
+			}
+		else {
+			doStart ();
 			}
 		}
 	}
@@ -493,7 +499,6 @@ function porkChopGetUserInfo () {
 			appPrefs.rssLink = "https://twitter.com/" + localStorage.twScreenName;
 			prefsToStorage ();
 			}
-		console.log ("porkChopGetUserInfo: twitterUserInfo == " + jsonStringify (twitterUserInfo));
 		});
 	}
 function porkChopStartup (options) {
@@ -507,10 +512,10 @@ function porkChopStartup (options) {
 			}
 		$("#idVersionNumber").html (s);
 		}
+	console.log ("porkChopStartup");
 	for (var x in options) {
 		appConsts [x] = options [x];
 		}
-	console.log ("porkChopStartup: appConsts == " + jsonStringify (appConsts));
 	twStorageData.urlTwitterServer = appConsts.urlTwitterServer; //1/16/16 by DW
 	urlDefaultServer = appConsts.urlTwitterServer; //"http://twitter.porkchop.io/";
 	//check if we're starting up on a phone

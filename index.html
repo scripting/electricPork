@@ -3,7 +3,17 @@
 		<title>Electric Pork</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<script src="http://fargo.io/code/jquery-1.9.1.min.js"></script><link href="http://fargo.io/code/bootstrap.css" rel="stylesheet"><script src="http://fargo.io/code/bootstrap.min.js"></script><link rel="stylesheet" href="http://fargo.io/code/fontAwesome/css/font-awesome.min.css"/><link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Rancho" rel="stylesheet"><script src="http://fargo.io/code/node/shared/utils.js"></script><script src="http://fargo.io/code/node/shared/alertdialog.js"></script><script src="http://fargo.io/code/node/shared/confirmdialog.js"></script><script src="http://fargo.io/code/node/shared/askdialog.js"></script><script src="http://fargo.io/code/strftime.js"></script><script src="http://fargo.io/code/shared/ga.js"></script><script src="http://fargo.io/code/shared/app.js"></script><script src="http://fargo.io/code/shared/menus.js"></script><link href="http://fargo.io/code/shared/menus.css" rel="stylesheet" type="text/css"><link href="http://fargo.io/code/shared/app.css" rel="stylesheet" type="text/css"><script src="http://fargo.io/code/shared/appprefs.js?x=2"></script><script src="http://fargo.io/code/shared/jBeep.min.js"></script><script src="http://fargo.io/code/shared/beep.js"></script>
+		<script src="//s3.amazonaws.com/scripting.com/code/includes/jquery-1.9.1.min.js"></script>
+<link href="//s3.amazonaws.com/scripting.com/code/includes/bootstrap.css" rel="stylesheet">
+<script src="//s3.amazonaws.com/scripting.com/code/includes/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="//s3.amazonaws.com/scripting.com/code/fontawesome/css/all.css">
+<link href="//fonts.googleapis.com/css?family=Ubuntu:400,500i,700" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Rancho" rel="stylesheet">
+
+<script src="//s3.amazonaws.com/scripting.com/code/includes/basic/code.js"></script>
+<link href="//s3.amazonaws.com/scripting.com/code/includes/basic/styles.css" rel="stylesheet" type="text/css">
+
 		<script src="http://fargo.io/code/storage/api.js"></script>
 		<script src="http://fargo.io/code/shared/buildrss.js?x=0"></script> 
 		<script src="http://fargo.io/code/autogrow/jquery.autogrowtextarea.js"></script> 
@@ -38,28 +48,28 @@
 	<div class="divTabsFromOutline">
 	<div class="tabbable">
 		<ul class="nav nav-tabs" data-tabs="tabs">
-			<li class="active" ><a href="#idPrefix455"  data-toggle="tab">Prefix</a></li>
-			<li><a href="#idTiming455"  data-toggle="tab">Timing</a></li>
-			<li><a href="#idFeed455"  data-toggle="tab">Feed</a></li>
-			<li><a href="#idTag455"  data-toggle="tab">Tag</a></li>
+			<li class="active" ><a href="#idPrefix739"  data-toggle="tab">Prefix</a></li>
+			<li><a href="#idTiming739"  data-toggle="tab">Timing</a></li>
+			<li><a href="#idFeed739"  data-toggle="tab">Feed</a></li>
+			<li><a href="#idTag739"  data-toggle="tab">Tag</a></li>
 			</ul>
 		<div id="my-tab-content" class="tab-content">
-			<div class="active tab-pane" id="idPrefix455">
+			<div class="active tab-pane" id="idPrefix739">
 				<fieldset>
 					<div class="divPrefs">	<p>You can change the text we add after the number at the beginning of each tweet.</p><div class="clearfix">	<label for="stringAfterNumber">Text:</label>	<div class="input">		<input class="xlarge prefsInput" id="stringAfterNumber" name="stringAfterNumber" size="50" type="text" value="" placeholder="The text we add after the number on each tweet." />		</div>	</div><div class="clearfix">	<label for="flIncludeTotalTweets"></label>	<div class="input">		<input type="checkbox" name="flIncludeTotalTweets" value=xxx>&nbsp;Include total number of tweets in prefix.		</div>	</div>	</div>
 					</fieldset>
 						</div>
-					<div class="tab-pane" id="idTiming455">
+					<div class="tab-pane" id="idTiming739">
 						<fieldset>
 							<div class="divPrefs">	<p>How much time between each tweet in a sequence?</p><div class="clearfix">	<label for="ctSecsBetwTweets">Time:</label>	<div class="input">		<input class="xlarge numberPrefsInput" id="ctSecsBetwTweets" name="ctSecsBetwTweets" size="7" type="text" value="" /><span class="textToRight">&nbsp;(seconds)</span>		</div>	</div>	</div>
 							</fieldset>
 								</div>
-							<div class="tab-pane" id="idFeed455">
+							<div class="tab-pane" id="idFeed739">
 								<fieldset>
 									<div class="divPrefs">	<div class="clearfix">	<label for="flPublishRss"></label>	<div class="input">		<input type="checkbox" name="flPublishRss" value=xxx>&nbsp;Include your posts in a public feed.		</div>	</div><div class="clearfix">	<label for="rssTitle">Title:</label>	<div class="input">		<input class="xlarge prefsInput" id="rssTitle" name="rssTitle" size="50" type="text" value="" placeholder="The &lt;title> element for the feed." />		</div>	</div><div class="clearfix">	<label for="rssLink">Link:</label>	<div class="input">		<input class="xlarge prefsInput" id="rssLink" name="rssLink" size="50" type="text" value="" placeholder="The &lt;link> element for the feed." />		</div>	</div><div class="clearfix">	<label for="rssDescription">Description:</label>	<div class="input">		<textarea class="xxlarge" id="rssDescription" name="rssDescription" cols="70" rows="3"placeholder="The &lt;description> element for the feed." ></textarea>		</div>	</div><div class="clearfix">	<label for="rssFeedUrl">Feed URL:</label>	<div class="input">		<input class="xlarge prefsInput" id="rssFeedUrl" name="rssFeedUrl" size="50" type="text" value="" placeholder="After your next post, this will contain the URL of your feed." />		</div>	</div>	</div>
 									</fieldset>
 										</div>
-									<div class="tab-pane" id="idTag455">
+									<div class="tab-pane" id="idTag739">
 										<fieldset>
 											<div class="divPrefs">	<p>You can automatically add a hash tag at the end of every tweet.</p><div class="clearfix">	<label for="hashTag">Tag:</label>	<div class="input">		<input class="xlarge prefsInput" id="hashTag" name="hashTag" size="50" type="text" value="" placeholder="#tag to add to every tweet" />		</div>	</div>	</div>
 											</fieldset>
